@@ -5,7 +5,8 @@ import time
 s3 = boto3.resource('s3')
 BUCKET = "mybuckets2003045"
 
-data_dir = "/home/ec2-user/environment/images/images/"
+data_dir = "/usr/bin/sg_code/cpd_cw/images"
+# "/home/ec2-user/environment/images/images/"
 
 photos = os.listdir(data_dir)
 

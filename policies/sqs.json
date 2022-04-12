@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Id": "s3EventSNS",
+    "Statement": [
+      {
+        "Sid": "s3EventSNSNotification",
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": "sns:Publish",
+        "Resource": "arn:aws:sns:us-east-1:788672474557:cwSNSTopicS2003045",
+        "Condition": {
+          "ArnLike": {
+            "aws:SourceArn": "arn:aws:s3:::mybuckets2003045"
+          }
+        }
+      }
+    ]
+  }
